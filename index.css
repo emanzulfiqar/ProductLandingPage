@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+
+:root{
+  --color-white:#F0EAD6;
+}
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size:1.625rem;
+  line-height:2rem;
+  font-family:'Oregano',sans-serif;
+  font-weight:900;
+}
+h1,h2,h3,h4{
+  font-size:2.2rem;
+  text-shadow:1px 1px 2px gray;
+}
+
+p{
+  font-size:1.5rem;
+  text-align:center;
+  font-weight:400;
+}
+.section{
+  padding:0 0.5rem;
+}
+a{
+  color:#000;
+  text-decoration:none;
+  font-weight:100;
+}
+.img{
+  max-width:100%;
+}
+.walk-image{
+    height: 100%;
+    width:100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wrapper{
+  position:relative;
+  margin-top:3.438rem;
+}
+nav{
+  position:fixed;
+  z-index:10;
+  top:0;
+  left:0;
+  right:0;
+  font-family:'Oregano';
+  font-size:1.219rem;
+  padding:0% 0% 0% 0%;
+  background-color:#fff;
+  height:3.5rem;
+}
+#logo>img{
+  margin-left:0;
+  padding-left:0;
+  float:left;
+  position:relative;
+  height:3.5rem;
+  width:9rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  
+}
+#nav-link{
+  float:right;
+  padding:0% 12%;
+  margin:0;
+  width:20%;
+  height:95%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.link {
+list-style:none;
+}
+/*CSS for anchor tags*/
+.nav-link{
+  display:block;
+  padding:0.5rem;
+  font-size:1.125rem;
+  font-weight:bold;
+  color:#000;
+  text-decoration:none;
+  font-family:'Oregano';
+  align-items:center;
+  cursor:pointer;
+  transition:all.3s ease-in-out;
+}
+#nav-toggle{
+  position:absolute;
+  top:-100px;
+}
+
+nav .icon-burger{
+  display:none;
+  position:absolute;
+  top:50%;
+  right:2.3%;
+  transform:translateY(-50%);
+}
+nav .icon-burger .line{
+  width:2.063rem;
+  height:0.313rem;
+  background:#000;
+  margin:0.313rem;
+  border-radius:0.188rem;
+  transition:all.3s ease-in-out;
+}
+@media screen and (max-width:768px){
+  #logo>img{
+    position:absolute;
+    height:100%;
+    width:auto;
+    float:none;
+    justify-content:center;
+    margin:auto;
+  }
+  #nav-link{
+    float:none;
+    width:auto;
+    height:auto;
+    left:0;
+    right:0;
+    bottom:100%;
+    top:3.438rem;
+    position:fixed;
+    z-index:9;
+    background-color:rgba(0,0,0,0.9);
+    flex-direction:column;
+    justify-content:space-around;
+    overflow:hidden;
+    transition:all.5s ease-in-out;
+  }
+  .nav-link {
+    color:#fff;
+    font-size:1.25rem;
+  }
+  .nav-link :hover :active{
+  background-color:white;
+}
+  nav :checked ~ #nav-link {
+    bottom:0;
+  }
+  nav .icon-burger{
+    display:block;
+  }
+  /*css not working :( */
+  /*nav: checked ~ .icon-burger .line:nth-child(1){
+    transform:translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line : nth-child(3){
+    transform:translateY(10px) rotate (225deg);
+  }
+  nav :checked ~ .icon-burger .line: nth-child(2){
+    opacity:0;*/
+  }
+
+.container {
+  max-width:62.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-responsive{
+  margin-top:1.25rem;
+  margin-bottom:1.25rem;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:1vh;
+}
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  border:0;
+  position:absolute;
+}
+iframe{
+  border:0;
+}
+/*For Flexbox Image Grid Responsive*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.25rem;
+  justify-content:center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 80%;
+  padding: 0 0.25rem;
+}
+
+.column img {
+  margin-top: 0.5rem;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+#footwear{
+  margin:0.25rem;
+  padding:0.25rem;
+}
+input{
+  padding:0 0.188rem;
+  height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 300;
+  border: 1px black solid;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.button{
+  padding:0 0.188rem;
+  height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px black solid;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/*footer*/
+footer {
+  margin-top: 1.875rem;
+  background-color: #ddd;
+  padding: 0.938rem;
+  font-size:1.375rem;
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 0.625rem;
+  list-style:none;
+}
+
+footer > span {
+  margin-top: 0.313rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.375rem;
+  color: #444;
+}
+/*Scrollbar*/
+::-webkit-scrollbar{
+  width:10px;
+}
+::-webkit-scrollbar-track{
+  border:1px solid rgba(100,100,100,0.4);
+  box-shadow:inset 0 0 5px grey;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#000;
+  border-radius:10px;
+}
